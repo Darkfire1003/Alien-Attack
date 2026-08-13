@@ -1,82 +1,71 @@
-<!doctype html>
-<html lang="de" class="h-full">
-  <head>
-    <meta charset="UTF-8"/>
-    <meta
-      name="viewport"
-      content="width=device-width, initial-scale=1.0"
-    />
-    <title>SpaceAttack</title>
-    <link rel="stylesheet" href="output.css" />
-  </head>
+<body class="m-0 flex h-screen flex-col overflow-hidden bg-[#1a0a2e]">
+  <header
+    class="flex h-16 shrink-0 items-center justify-center bg-linear-to-t from-[#1a0a2e] via-[#1b1b8f]/80 via-100% to-transparent"
+  >
+    <h1 class="text-center text-3xl font-bold text-amber-50 md:text-5xl">
+      Alien ATTACK
+    </h1>
+  </header>
 
-  <body class="m-0 flex h-screen flex-col overflow-hidden bg-[#1a0a2e]">
-    <header class="flex h-20 shrink-0 items-center justify-center bg-linear-to-t from-[#1a0a2e] via-[#1b1b8f]/80 via-100% to-transparent">
-      <h1 class="text-center text-2xl font-bold text-amber-50 md:text-3xl">
-        Alien ATTACK
-      </h1>
-    </header>
+  <main class="flex min-h-0 flex-1 items-center justify-center overflow-hidden px-4">
+    <div class="flex max-h-full flex-col items-center gap-2">
+      <canvas
+        id="canvas"
+        width="720"
+        height="480"
+        class="block h-auto w-full max-w-[720px]"
+      ></canvas>
 
-    <main class="flex flex-1 items-center justify-center overflow-hidden px-4">
-      <div class="flex max-h-full flex-col items-center gap-2">
-        <canvas
-          id="canvas"
-          width="720"
-          height="480"
-          class="h-auto w-full max-w-[720px]"
-        ></canvas>
-
-        <div id="mobile-controls" class="w-full md:hidden">
-          <div class="flex w-full items-center justify-between px-4">
-            <div class="flex flex-col gap-5">
-              <button
-                id="btn-up"
-                class="rounded-full bg-blue-600 px-5 py-4 font-bold text-white active:scale-95"
-              >
-                ▲
-              </button>
-
-              <button
-                id="btn-down"
-                class="rounded-full bg-blue-600 px-5 py-4 font-bold text-white active:scale-95"
-              >
-                ▼
-              </button>
-            </div>
+      <div id="mobile-controls" class="w-full md:hidden">
+        <div class="flex w-full items-center justify-between px-4">
+          <div class="flex flex-col gap-4">
+            <button
+              id="btn-up"
+              class="rounded-full bg-blue-600 px-5 py-4 font-bold text-white active:scale-95"
+            >
+              ▲
+            </button>
 
             <button
-              id="btn-shoot"
-              class="rounded-full bg-yellow-500 px-5 py-4 font-bold text-black active:scale-95"
+              id="btn-down"
+              class="rounded-full bg-blue-600 px-5 py-4 font-bold text-white active:scale-95"
             >
-              SHOOT
+              ▼
             </button>
           </div>
-        </div>
-
-        <div class="flex gap-4">
-          <button
-            id="start-btn"
-            onclick="startGame()"
-            class="rounded-md bg-green-600 px-5 py-2 font-semibold text-white transition-all duration-150 hover:bg-green-400 hover:text-black"
-          >
-            Spiel starten
-          </button>
 
           <button
-            id="restart-btn"
-            onclick="restartGame()"
-            class="hidden rounded-md bg-red-600 px-5 py-2 font-semibold text-white transition-all duration-150 hover:bg-red-400 hover:text-black"
+            id="btn-shoot"
+            class="rounded-full bg-yellow-500 px-5 py-4 font-bold text-black active:scale-95"
           >
-            Neustart
+            SHOOT
           </button>
         </div>
       </div>
-    </main>
 
-    <footer class="shrink-0 bg-linear-to-b from-[#1a0a2e] via-[#1b1b8f]/80 via-100% to-transparent">
-      <p class="text-center text-white">&copy; 2026 Kuscher Michael</p>
-    </footer>
+      <div class="flex gap-4">
+        <button
+          id="start-btn"
+          onclick="startGame()"
+          class="rounded-md bg-green-600 px-5 py-2 font-semibold text-white transition-all duration-150 hover:bg-green-400 hover:text-black"
+        >
+          Spiel starten
+        </button>
 
-    <script src="scripts.js"></script>
-  </body>
-</html>
+        <button
+          id="restart-btn"
+          onclick="restartGame()"
+          class="hidden rounded-md bg-red-600 px-5 py-2 font-semibold text-white transition-all duration-150 hover:bg-red-400 hover:text-black"
+        >
+          Neustart
+        </button>
+      </div>
+    </div>
+  </main>
+
+  <footer
+    class="shrink-0 bg-linear-to-b from-[#1a0a2e] via-[#1b1b8f]/80 via-100% to-transparent py-1"
+  >
+    <p class="text-center text-sm text-white">&copy; 2026 Kuscher Michael</p>
+  </footer>
+</body>
