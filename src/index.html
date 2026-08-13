@@ -13,7 +13,7 @@
     />
   </head>
 
-  <body class="flex h-screen flex-col">
+  <body class="flex h-screen flex-col overflow-hidden">
     <header
       class="container h-28 flex justify-between items-center bg-linear-to-t from-[#1a0a2e] via-[#1b1b8f]/80 via-100% to-transparent"
     >
@@ -21,8 +21,9 @@
         Alien ATTACK
       </h1>
     </header>
+
     <main
-      class="mx-auto flex flex-1 justify-center items-center bg-[#1a0a2e]"
+      class="mx-auto flex flex-1 justify-center items-center bg-[#1a0a2e] w-full"
     >
       <div class="flex flex-col items-center gap-4">
         <canvas
@@ -31,6 +32,7 @@
           height="480"
           class="w-full max-w-180 h-auto"
         ></canvas>
+
         <div
           id="mobile-controls"
           class="mt-4 w-full md:hidden"
@@ -82,11 +84,11 @@
     </main>
 
     <footer
-      class="container bg-linear-to-b from-[#1a0a2e] via-[#1b1b8f]/80 via-100% to-transparent"
+      class="container h-16 flex items-center bg-linear-to-b from-[#1a0a2e] via-[#1b1b8f]/80 via-100% to-transparent"
     >
-      <p class="text-center text-white">&copy; 2026 Kuscher Michael</p>
+      <p class="text-center text-white w-full">&copy; 2026 Kuscher Michael</p>
     </footer>
-    <!-- Script -->
+
     <script src="scripts.js"></script>
   </body>
 </html>
